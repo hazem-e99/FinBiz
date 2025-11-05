@@ -13,10 +13,15 @@ const NewsletterInput = ({ placeholder = "Enter email address", buttonText = "Jo
   return (
     <form 
       onSubmit={handleSubmit}
-      className="flex items-center gap-[13px] bg-transparent"
+      className="flex items-center bg-[#1A1A1A] border border-[#333333] rounded-lg overflow-hidden transition-colors duration-200 hover:border-[#A3DC2F]"
       style={{
         width: '487.5px',
         height: '55px',
+        paddingTop: '17px',
+        paddingRight: '16px',
+        paddingBottom: '17px',
+        paddingLeft: '20px',
+        gap: '13px',
       }}
     >
       {/* Email Input */}
@@ -26,12 +31,8 @@ const NewsletterInput = ({ placeholder = "Enter email address", buttonText = "Jo
         onChange={(e) => setEmail(e.target.value)}
         placeholder={placeholder}
         required
-        className="flex-1 h-full bg-transparent border border-[#333333] rounded-lg outline-none transition-colors duration-200 focus:border-[#A3DC2F]"
+        className="flex-1 bg-transparent border-none outline-none placeholder:text-white"
         style={{
-          paddingTop: '17px',
-          paddingRight: '16px',
-          paddingBottom: '17px',
-          paddingLeft: '20px',
           fontFamily: 'DM Sans, sans-serif',
           fontSize: '16px',
           color: '#FAFAFA',
@@ -41,11 +42,19 @@ const NewsletterInput = ({ placeholder = "Enter email address", buttonText = "Jo
       {/* Join Button */}
       <button
         type="submit"
-        className="h-full px-8 bg-[#A3DC2F] hover:bg-[#92c925] text-[#0F0F0F] font-semibold rounded-lg transition-colors duration-200"
+        className="bg-[#A3DC2F] hover:bg-[#92c925] text-white font-semibold transition-colors duration-200"
         style={{
+          width: '175.55px',
+          height: '55px',
+          padding: '16px',
+          borderTopRightRadius: '8px',
+          borderBottomRightRadius: '8px',
           fontFamily: 'DM Sans, sans-serif',
           fontSize: '16px',
           fontWeight: 600,
+          marginTop: '-17px',
+          marginBottom: '-17px',
+          marginRight: '-16px',
         }}
       >
         {buttonText}
